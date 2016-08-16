@@ -41,10 +41,10 @@ git clone https://github.com/zhgxun/console.git
 
 代码提交时,只能提交对应的目录,即是每次进入对应的目录后执行:
 ```
-git pull;git update;git add --all;git commit -m 'fix issue';git push;
+git pull;git add --all;git commit -m 'fix issue';git push;
 ```
 
 回到最外层目录zoulu中,需要在执行一次提交
 ```
-git pull;git update;git add --all;git commit -m 'fix issue';git push;
+git pull;git add --all;git commit -m 'fix issue';git push;
 ```
