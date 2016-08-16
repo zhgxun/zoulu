@@ -1,54 +1,50 @@
-Yii 2 Advanced Project Template
+项目使用说明
 ===============================
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
-
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
-
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
-
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
-
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
-
-DIRECTORY STRUCTURE
--------------------
-
+目前在GitHub找不到vendor核心模块的仓库了,之前还可以,直接fork核心模块的仓库,每次只需要简单的执行指令
 ```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
+git pull
+```
+就可以保持框架代码是最新的,也不需要人为修改框架源码。当然,在几家公司工作后,看到的都是前辈们把核心框架修改的面目全非,带来的直接后果,也是最致命的伤害是,框架再也无法进行升级了。
+
+项目结构
+-------------------
+切换到工作目录后,首先checkout最外层目录zoulu
+```
+git clone https://github.com/zhgxun/zoulu.git
+```
+然后进入到该目录中
+```
+cd zoulu
+```
+依次checkout如下目录,没有顺序依赖
+
 backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
+```
+git clone https://github.com/zhgxun/backend.git
+```
+
+common
+```
+git clone https://github.com/zhgxun/common.git
+```
+
 frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-tests                    contains various tests for the advanced application
-    codeception/         contains tests developed with Codeception PHP Testing Framework
+```
+git clone https://github.com/zhgxun/frontend.git
+```
+
+console
+```
+git clone https://github.com/zhgxun/console.git
+```
+
+代码提交时,只能提交对应的目录,即是每次进入对应的目录后执行:
+```
+git pull;git update;git add --all;git commit -m 'fix issue';git push;
+```
+
+回到最外层目录zoulu中,需要在执行一次提交
+```
+git pull;git update;git add --all;git commit -m 'fix issue';git push;
 ```
